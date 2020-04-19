@@ -1,7 +1,7 @@
 
 # AKKA Blueprint project
 
-Build powerful concurrent & distributed applications more easily with [AKKA](https://akka.io). This is project to demostrate some richful features provided by AKKA framework when creating application with very lightweight event-driven processes, using some design pattern. Some features used in this project: queue, exchange messages, priority, mailbox. The idea is demonstrate exchange message done as asynchronous, non-blocking and based on highly performant message-driven programming model. Customization on queue mechanism, also allow you to defines fault handling supervisor strategy. <img align="right" width="100" height="100" src="https://akka.io/resources/images/akka_full_color.svg">
+Build powerful concurrent & distributed applications more easily with [AKKA](https://akka.io). This is project to demostrate some richful features provided by AKKA framework when creating application with very lightweight event-driven processes, using some design pattern. Some features used in this project: queue, exchange messages, priority, mailbox. The idea is demonstrate exchange message done as asynchronous, non-blocking and based on highly performant message-driven programming model. Customization on queue mechanism, also allow you to defines fault handling supervisor strategy. <img align="right" width="150" height="150" src="https://akka.io/resources/images/akka_full_color.svg">
 
 
 Besides that, it contains a friendly Java desktop application(SWT) to show the work.
@@ -11,11 +11,12 @@ Besides that, it contains a friendly Java desktop application(SWT) to show the w
 ## Running from desktop application
 
 * Run as java application the file: /akka.gui.examples/src/main/java/org/akka/example/gui/Main.java
-* It will raise a Java desktop application made with SWT libraries. Which is using "akka.console.example" as dependencies, contains all akka mechanism/process required.
+* It will raise a Java desktop application made with [SWT](https://www.eclipse.org/swt/) libraries. Which is using "akka.console.example" as dependencies, contains all akka mechanism/process required.
 * Click in "Add Worker" to start creating workers, each worker has a set of operation with priorities.
+  * You can create infinity workers to see large number of messages exchanged between client and workers.
 * When clicking over "Remove/Config/Recovery", you are sending a message to worker to be processed, once is completed, worker replies back to client which will eliminate the job from the app. AKKA framework is supporting this communication.
-* Each operation has priority associated, you can implement own priorization. It means, message with higher priorioty will take over others.
-* You can create infinity workers to see large number of messages exchanged between client and workers.
+  * Each operation has priority associated, you can implement own priorization. It means, message with higher priorioty will take over others.
+* See app animation below:
 	![](akka.gui.examples/docs/AppAkkaQueueExample.gif)
 
 ## Other examples
